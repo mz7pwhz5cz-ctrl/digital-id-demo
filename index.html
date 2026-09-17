@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital ID Demo • Prywatne zaproszenie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login" class="screen">
+  <div class="login-card">
+    <div class="logo">DID</div>
+    <p class="eyebrow">PRYWATNE DEMO</p>
+    <h1>Wprowadź kod dostępu</h1>
+    <p class="muted">Ten ekran jest częścią demonstracyjnej aplikacji. Nie jest dokumentem urzędowym.</p>
+    <input id="accessCode" type="password" placeholder="Kod zaproszenia" autocomplete="off">
+    <button id="loginBtn">Wejdź do aplikacji</button>
+    <p id="loginError" class="error"></p>
+  </div>
+</div>
+
+<div id="app" hidden>
+<header>
+  <div><span class="eyebrow">DIGITAL ID</span><h1>Demo dokumentu</h1></div>
+  <div class="header-actions">
+    <span class="demo">DEMO • NIE JEST DOKUMENTEM</span>
+    <button id="logout" class="ghost">Wyloguj</button>
+  </div>
+</header>
+
+<main>
+<section class="panel">
+<h2>Dane demonstracyjne</h2>
+<p class="muted">Dane są przykładowe i przechowywane lokalnie w tej przeglądarce.</p>
+<div class="grid">
+<label>Imię<input id="firstName" value="Jan"></label>
+<label>Nazwisko<input id="lastName" value="Kowalski"></label>
+<label>Data urodzenia<input id="birthDate" type="date" value="2008-01-15"></label>
+<label>Obywatelstwo<input id="citizenship" value="POLSKIE"></label>
+<label>Miejsce urodzenia<input id="birthPlace" value="Kraków"></label>
+<label>Miasto<input id="city" value="Kraków"></label>
+</div>
+<label class="photo">Zdjęcie demonstracyjne<input id="photoInput" type="file" accept="image/*"></label>
+<div class="actions"><button id="apply">Aktualizuj podgląd</button><button id="reset" class="secondary">Reset</button></div>
+</section>
+
+<section class="card">
+<div class="card-top"><div><small>DOKUMENT CYFROWY</small><b>IDENTYFIKACJA • DEMO</b></div><span>◆</span></div>
+<div class="watermark">DEMO</div>
+<div class="identity">
+<div class="photo-frame"><img id="photo" alt="Zdjęcie demonstracyjne"></div>
+<div class="details">
+<small>IMIĘ I NAZWISKO</small><strong id="fullName">Jan Kowalski</strong>
+<div class="tw"><div><small>DATA URODZENIA</small><b id="outBirth">15.01.2008</b></div><div><small>OBYWATELSTWO</small><b id="outCitizenship">POLSKIE</b></div></div>
+<div class="tw"><div><small>MIEJSCE URODZENIA</small><b id="outBirthPlace">Kraków</b></div><div><small>MIASTO</small><b id="outCity">Kraków</b></div></div>
+</div></div>
+<footer>WERSJA TESTOWA · TYKO DO CELÓW EDUKACYJNYCH</footer>
+</section>
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
